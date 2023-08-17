@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-firt-app';
+
+  fName: string = "jean";
+  lName: string = "quentin";
+  age: number = 20;
+  result: boolean = false;
+  valid: string = "exact";
+
+  constructor(){
+    // setTimeout(() =>{
+    //   this.result = true
+    // },5000)
+  }
+  getAge(): number{
+    return this.age;
+  }
+  // getData(e: Event){
+  //   //console.log(e)
+  //   this.fName = (<HTMLInputElement>e.target).value;
+  // }
 }
