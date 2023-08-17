@@ -1,1 +1,6 @@
-<p>person works!</p>
+<p>
+  My name is : {{name}}
+</p>
+
+<label>reset a name: <input #reset></label>
+<button (click)="addName(reset.value)">reset a name</button>

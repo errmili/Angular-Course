@@ -33,8 +33,7 @@
     </form>
   </div>
 </nav> -->
-<!-- <app-student></app-student> -->
-<!-- <div app-student></div> -->
+
 <p [innerText] = "fName"></p>
 <p>last name : {{lName}}</p>
 <p>Age : {{getAge()}}</p>
@@ -44,13 +43,15 @@
   <input [(ngModel)]="fName" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
 </div>
 
-<div *ngIf="fName === 'jean'; else sir">
+<div *ngIf="fName === 'jean'; else sir" [ngClass]="{syleing: false}">
   {{valid}}
 </div>
 <ng-template #sir>
 Not yet
 </ng-template>
 
-<div *ngFor="let friend of friends">
+<div *ngFor="let friend of friends" [ngStyle]="{backgroundColor: mycolor}">
     {{friend}}
 </div>
+
+<app-person [name] = "fName" (reset)="resetName($event)"></app-person>

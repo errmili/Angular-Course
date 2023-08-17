@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -13,7 +13,9 @@ export class AppComponent {
   age: number = 20;
   result: boolean = false;
   valid: string = "exact";
-  
+  mycolor: string = "blue"
+
+
   friends: string[] = ['jean',"valentin","hergel"]
 
   constructor(){
@@ -28,4 +30,9 @@ export class AppComponent {
   //   //console.log(e)
   //   this.fName = (<HTMLInputElement>e.target).value;
   // }
+
+
+  resetName(name: string){
+    this.fName = name;
+  }
 }
