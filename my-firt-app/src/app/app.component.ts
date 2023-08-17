@@ -13,6 +13,8 @@ export class AppComponent {
   age: number = 20;
   result: boolean = false;
   valid: string = "exact";
+  
+  friends: string[] = ['jean',"valentin","hergel"]
 
   constructor(){
     // setTimeout(() =>{
